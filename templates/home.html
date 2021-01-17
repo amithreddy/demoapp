@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Image Repository</title>
+</head>
+<body>
+
+<h1> Image repository </h1>
+	<p> Dash board. Currently LOGGED OUT or LOGGED IN AS </p>
+
+<table style="width:100%">
+	<tr>
+		<th>Name</th>
+		<th>Thumbnail</th>
+		<th>Image link</th>
+		<th>ID</th>
+	</tr>
+	{% for item in table %}
+	<tr>
+		<th>{{item.name}}</th>
+		<th>{{item.thumnailurl}}</th>
+		<th>{{item.url}}</th>
+		<th>{{item.ID}}</th>
+	</tr>
+	{% endfor %}
+</table>
+
+</body>
+</html>
