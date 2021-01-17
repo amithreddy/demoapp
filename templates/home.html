@@ -6,23 +6,25 @@
 
 <h1> Image repository </h1>
 	<p> Dash board. Currently LOGGED OUT or LOGGED IN AS </p>
-
-<table style="width:100%">
+<form method="post" action="/">
+	<table style="width:100%">
 	<tr>
+		<th></th>
 		<th>Name</th>
 		<th>Thumbnail</th>
 		<th>Image link</th>
-		<th>ID</th>
 	</tr>
-	{% for item in table %}
+	{% for row in table %}
 	<tr>
-		<th>{{item.name}}</th>
-		<th>{{item.thumnailurl}}</th>
-		<th>{{item.url}}</th>
-		<th>{{item.ID}}</th>
+		<th> <input type="checkbox" name={{row.ID}}/>
+		<th>{{row.name}}</th>
+		<th>{{row.thumbnailurl}}</th>
+		<th>{{row.url}}</th>
 	</tr>
 	{% endfor %}
-</table>
+	</table>
+	<input type="submit"/>
+</form>
 
 </body>
 </html>

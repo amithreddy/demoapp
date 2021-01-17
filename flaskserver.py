@@ -4,4 +4,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('home.html')
+    adict = { 
+            'name':"zebra",
+           'thumbnail':"/img",
+           'url':"/img2",
+           'ID':1
+            }
+    items = [adict, adict]
+    return render_template('home.html',table=items)
+
+
