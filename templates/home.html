@@ -13,8 +13,8 @@ I, Amith Reddy, made this image repository to demonstrate my skillset and unders
 the animals you don't like. Refer to the instructions below.</p>
 <h3> Instructions </h3>
 <ul>
-	<li><b> To open a image</b>Click on the image name to open the image in a new tab.</li>
-	<li> <b> To delete image(s)</b> Select the checkbox and click the "Delete selected" button.</li>
+	<li><b> To open a image</b> Click on the image name to open the image in a new tab.</li>
+	<li> <b> To delete image(s)</b> Select one or more checkbox and click the "Delete selected" button.</li>
 	<li> <b> To reset</b> the database to the original. Click the "Reset Database" button</li>
 </ul>
 <div>
@@ -26,7 +26,7 @@ the animals you don't like. Refer to the instructions below.</p>
 	</tr>
 	{% for row in table %}
 	<tr>
-		<th> <input type="checkbox" name={{row.ID}}/>
+		<th> <input type="checkbox" name="checked" value={{row.ID}}/>
 		<th><a href="static/images/{{row.url}}" >{{row.description}}</th>
 	</tr>
 	{% endfor %}
